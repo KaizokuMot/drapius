@@ -11,6 +11,7 @@ a {
 }
 
 .nav-bar {
+    margin-top: 12px;
     /* background-color: red; */
 }
 
@@ -152,4 +153,25 @@ a {
     .mobile-drawer-overlay {
         display: none !important;
     }
+}
+
+
+.top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    color: white;
+    align-items: center;
+    width: 100%;
+    background: red;
+    margin-bottom: 22px;
+}
+
+.top-bar-text{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 0;
+    width: 100%;
+    text-align: center;
 }
