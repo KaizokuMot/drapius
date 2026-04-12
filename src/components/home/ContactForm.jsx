@@ -1,7 +1,7 @@
 import React from 'react';
-import { Send, MapPin, Phone, Mail } from 'lucide-react';
+import { Send, MapPin, Mail, Landmark } from 'lucide-react';
 import './Home.css';
-import { motion } from 'framer-motion';
+import { contactInfo } from '../../content/drapiusContent';
 
 const ContactForm = () => {
   return (
@@ -30,7 +30,16 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-white/50 text-xs font-bold uppercase tracking-widest">Head Office</p>
-                    <p className="font-semibold">Buganda Road Block 663, Kampala, Uganda</p>
+                    <p className="font-semibold">{contactInfo.headOffice}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 text-white">
+                  <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Landmark className="text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-white/50 text-xs font-bold uppercase tracking-widest">Legal Status</p>
+                    <p className="font-semibold">{contactInfo.legalStatus}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-white">

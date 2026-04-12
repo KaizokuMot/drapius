@@ -2,6 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, TrendingUp } from 'lucide-react';
 import './Home.css';
+import "./hero.css"
+import MARKET from "../../assets/grain.png"
+import CHANGE from "../../assets/change.png"
+import MARKET2 from "../../assets/market2.png"
+
 
 const Hero = () => {
   return (
@@ -19,10 +24,14 @@ const Hero = () => {
                 Transforming African Innovation
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-primary mb-6">
-                The Modern Capital Platform for Growth <br />
-                <span className="text-secondary opacity-80">On Your Terms.</span>
+              <h1 className="hero-title font-bold">
+                The Modern Capital 
               </h1>
+              
+              <h1 className="hero-title-2 ">
+                Platform for Growth
+              </h1>
+              <h1 className="hero-sub-title text-secondary opacity-80">On Your Terms.</h1>
               
               <p className="text-lg text-text-muted mb-8 leading-relaxed max-w-[540px]">
                 Sourcing, securing, and managing strategic investments for high-impact projects. 
@@ -47,11 +56,11 @@ const Hero = () => {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary">$150M+</div>
-                  <div className="text-xs uppercase tracking-widest text-text-muted mt-1">Capital Managed</div>
+                  <div className="text-xs uppercase tracking-widest text-text-muted mt-1">Capital Projected</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">100%</div>
-                  <div className="text-xs uppercase tracking-widest text-text-muted mt-1">Success Rate</div>
+                  <div className="text-3xl font-bold text-primary">85%</div>
+                  <div className="text-xs uppercase tracking-widest text-text-muted mt-1">Deal Closure Rate</div>
                 </div>
               </div>
             </motion.div>
@@ -68,21 +77,21 @@ const Hero = () => {
               {/* Arches strictly inside the right column */}
               <div className="arch-item arch-main">
                 <img 
-                  src="https://images.unsplash.com/photo-1573163281530-5be9c294833e?auto=format&fit=crop&q=80&w=800" 
+                  src={MARKET2} 
                   alt="Business Innovation" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="arch-item arch-secondary">
-                <img 
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800" 
+                <img
+                  src={MARKET} 
                   alt="Strategic Partnership" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="arch-item arch-tertiary">
                 <img 
-                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800" 
+                src={CHANGE}
                   alt="African Growth" 
                   className="w-full h-full object-cover"
                 />
@@ -96,7 +105,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <div className="text-[10px] uppercase font-bold text-primary/60 tracking-wider">Investment Growth</div>
-                    <div className="text-lg font-bold text-primary">+24.5% Past Yr</div>
+                    <div className="projections text-primary">+24.5% Projected Annually</div>
                   </div>
                 </div>
                 <div className="h-1 bg-primary/10 rounded-full overflow-hidden">

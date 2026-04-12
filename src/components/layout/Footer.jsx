@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUpRight, Link2, Globe, Send, MessageSquare } from 'lucide-react';
 
 const Footer = () => {
@@ -8,9 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-accent font-bold text-xl">D</span>
-              </div>
+            
               <div className="flex flex-col">
                 <span className="text-primary font-bold text-lg leading-none tracking-tight">DRAPIUS</span>
                 <span className="text-primary text-[10px] font-semibold tracking-widest mt-1">CAPITAL</span>
@@ -30,11 +29,11 @@ const Footer = () => {
           <div>
             <h4 className="text-primary font-bold mb-8">Navigation</h4>
             <ul className="space-y-4">
-              <li><a href="/" className="text-text-muted hover:text-primary">Home</a></li>
-              <li><a href="#about" className="text-text-muted hover:text-primary">About Us</a></li>
-              <li><a href="#sectors" className="text-text-muted hover:text-primary">Sectors</a></li>
-              <li><a href="#portfolio" className="text-text-muted hover:text-primary">Portfolio</a></li>
-              <li><a href="#blog" className="text-text-muted hover:text-primary">Insights & News</a></li>
+              <li><Link to="/" className="text-text-muted hover:text-primary">Home</Link></li>
+              <li><Link to="/about" className="text-text-muted hover:text-primary">About Us</Link></li>
+              <li><Link to="/sectors" className="text-text-muted hover:text-primary">Sectors</Link></li>
+              <li><Link to="/portfolio" className="text-text-muted hover:text-primary">Portfolio</Link></li>
+              <li><Link to="/blog" className="text-text-muted hover:text-primary">Insights & News</Link></li>
             </ul>
           </div>
 

@@ -2,44 +2,33 @@ import React from 'react';
 import { Link2, Globe, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './Home.css';
+import PIUS from "../../assets/ppp3.png"
+import DRAKE from "../../assets/drake.jpeg"
+import DEV from "../../assets/dx2.png"
+import { leadershipTeam, leadershipIntro } from '../../content/drapiusContent';
 
-const team = [
-  {
-    name: "Drake Makanga",
-    role: "General Manager",
-    bio: "Leading the company’s strategic direction and high-level stakeholder engagement, Drake ensures that all operations align with the firm’s long-term vision.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
-  },
-  {
-    name: "Pius Walugembe",
-    role: "Head of Operations",
-    bio: "Pius oversees the day-to-day execution of projects, ensuring that logistics, timelines, and implementation standards meet rigorous international partner demands.",
-    image: "https://images.unsplash.com/photo-1519085184528-ce7ad1962972?auto=format&fit=crop&q=80&w=400"
-  },
-  {
-    name: "Dixon Kalanzi",
-    role: "Head of I.T and Data Management",
-    bio: "Spearheading digital infrastructure, utilizing data analytics to track performance and ensuring investment sourcing is backed by cutting-edge technology.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
-  }
-];
+const images = [DRAKE, PIUS, DEV];
+
+const team = leadershipTeam.map((member, index) => ({
+  ...member,
+  image: images[index],
+}));
 
 const Team = () => {
   return (
     <section id="team" className="section bg-bg-light">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h4 className="text-secondary font-bold tracking-widest uppercase text-sm mb-4">The Experts</h4>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Real-world success with the best expertise in the field.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Leadership Team</h2>
           <p className="text-text-muted text-lg">
-            Our leadership combines local market intelligence with technical expertise to ensure every project is viable and scalable.
+            {leadershipIntro}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {team.map((member, index) => (
             <motion.div 
-              key={index}
+              key={member.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
