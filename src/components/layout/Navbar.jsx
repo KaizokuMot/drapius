@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-4 shadow-md' : 'py-6'}`}>
-        <div className='top-bar'><p className='top-bar-text'>site under development v.2.0</p></div>
+        <div className='top-bar'><p className='top-bar-text'>site under development v.3.0</p></div>
         <div className="nav-bar container flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="flex flex-col">
