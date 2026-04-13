@@ -11,6 +11,10 @@
     --section-padding: 60px 5%;
   }
 
+  .hero-top-text{
+    margin-left: 0px !important;
+  }
+
   .top-bar-text {
     font-size: 12px;
     font-weight: 500;

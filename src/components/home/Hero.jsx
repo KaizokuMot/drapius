@@ -20,7 +20,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="bg-primary/5 text-primary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase inline-block mb-6">
+              <div className="hero-top-text bg-primary/5 text-primary px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase inline-block mb-6">
                 Transforming African Innovation
               </div>
               
