@@ -6,10 +6,30 @@
    MOBILE TYPOGRAPHY & GENERAL
    ======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   :root {
     --section-padding: 60px 5%;
   }
+
+  .top-bar-text {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0px !important;
+    padding: 4px 0;
+    width: 100%;
+    text-align: center;
+}
+
+  .hero-action{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: row !important;
+        }
+
+        .action-btn{
+        font-size: 0.65rem !important;
+                border-radius: 40px;
+        }
 
   body {
     font-size: 16px;
@@ -46,9 +66,10 @@
      NAVBAR MOBILE
      ======================================== */
 
-  .nav-bar {
-    padding: 0 !important;
-  }
+ .nav-bar {
+    margin-top: 28px !important;
+    /* background-color: red; */
+}
 
   .logo-text {
     font-size: 16px !important;

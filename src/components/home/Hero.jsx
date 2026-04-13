@@ -39,11 +39,11 @@ const Hero = () => {
                 sustainable development in East Africa.
               </p>
               
-              <div className="flex flex-wrap items-center gap-4">
-                <button className="btn btn-primary flex items-center gap-2">
+              <div className="hero-action flex flex-wrap items-center gap-4">
+                <button className="action-btn btn btn-primary flex items-center gap-2">
                   Partner With Us <ArrowUpRight className="w-4 h-4" />
                 </button>
-                <button className="btn bg-white border border-primary/10 text-primary hover:bg-primary/5">
+                <button className="action-btn btn bg-white border border-primary/10 text-primary hover:bg-primary/5">
                   Our Track Record
                 </button>
               </div>

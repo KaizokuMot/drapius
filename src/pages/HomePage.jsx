@@ -23,16 +23,16 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl invisible lg:visible"></div>
-              <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="relative z-10 overflow-hidden shadow-2xl">
                 <img
                   src={SUPPORT}
                   alt="Our Vision"
                   className="w-full h-[600px] object-cover"
                 />
-                <div className="absolute bottom-8 left-8 right-8 glass p-8 rounded-2xl">
+                {/* <div className="absolute bottom-8 left-8 right-8 glass p-8 rounded-2xl">
                   <p className="text-primary font-bold text-xl mb-2 italic">&quot;Turning innovative ideas into market-leading institutions.&quot;</p>
                   <p className="text-primary/60 font-bold text-xs uppercase tracking-widest">— DRAKE MAKANGA, GM</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
