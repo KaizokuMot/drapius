@@ -7,6 +7,7 @@ import PortfolioPage from './pages/PortfolioPage';
 import BlogPage from './pages/BlogPage';
 
 function App() {
+  
   return (
     <Routes>
       <Route element={<Layout />}>

@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, useLocation, NavLink } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import "./navbar.css"
 
-const navClass = ({ isActive }) =>
-  isActive ? 'font-semibold text-primary' : 'font-medium text-text-dark hover:text-primary transition-colors';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { pathname } = useLocation();
+  const redHeaderPages = ['/about', '/portfolio']
+  const isWhiteHeader = redHeaderPages.includes(pathname);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,28 +21,47 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+const linkColor = isWhiteHeader && !isScrolled 
+  ? "text-white hover:text-gray-200" 
+  : "text-text-dark hover:text-primary";
+
+  const whitecolor = isWhiteHeader && !isScrolled
+  ? "fuck"
+  : "mazi";
+
+const navClass = `font-medium transition-colors ${linkColor}`;
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-4 shadow-md' : 'py-6'}`}>
+      <nav className={isWhiteHeader ? `white-links fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-4 shadow-md' : 'py-6'}`:"black-links"}>
         <div className='top-bar'><p className='top-bar-text'>site under development v.4.0</p></div>
         <div className="nav-bar container flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="flex flex-col">
-              <span className="logo-text text-primary font-bold text-lg leading-none tracking-tight">DRAPIUS</span>
-              <span className="logo-sub-text text-primary text-[10px] font-semibold tracking-widest">CAPITAL</span>
+              <span className={isWhiteHeader ? "white-links logo-text text-primary font-bold text-lg leading-none tracking-tight" : "logo-text text-primary font-bold text-lg leading-none tracking-tight"}>DRAPIUS</span>
+              <span className={isWhiteHeader ? "white-links logo-sub-text text-primary text-[10px] font-semibold tracking-widest" : "logo-sub-text text-primary text-[10px] font-semibold tracking-widest"}>CAPITAL</span>
             </div>
           </Link>
 
           <div className="desktop-menu items-center gap-8">
             <NavLink to="/" end className={navClass}>Home</NavLink>
             <NavLink to="/about" className={navClass}>About</NavLink>
-            <Link to="/" className="font-medium text-text-dark hover:text-primary transition-colors">Awega SCI+</Link>
+            <Link to="/" className='white-links' >Awega SCI+</Link>
             <NavLink to="/sectors" className={navClass}>Sectors</NavLink>
-            <NavLink to="/portfolio" className={navClass}>Portfolio</NavLink>
+            <NavLink to="/portfolio" className={isWhiteHeader ? "white-links font-medium text-text-dark hover:text-primary transition-colors" : "font-medium text-text-dark hover:text-primary transition-colors"}>Portfolio</NavLink>
             <NavLink to="/blog" className={navClass}>Blog</NavLink>
-            <Link to="/#contact" className="contact-us-btn btn btn-primary ml-4">
-              Contact Us <ArrowUpRight className="ml-2 w-4 h-4" />
-            </Link>
+           
+
+    <Link 
+          to="/#contact" 
+          className={`contact-us-btn fuck btn ml-4 transition-all ${
+            whitecolor 
+              ? "bg-white text-red-600 mazi hover:bg-gray-100 border-none" 
+              : "btn-primary"
+          }`}
+        >
+          Contact Us <ArrowUpRight className="ml-2 w-4 h-4" />
+        </Link>
+           
           </div>
 
           <button className="mobile-menu-btn text-primary p-2 rounded-md hover:bg-slate-100 transition" style={{display: isMenuOpen ? 'none' : 'block'}} onClick={() => setIsMenuOpen(!isMenuOpen)}>

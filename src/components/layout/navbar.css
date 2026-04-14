@@ -11,13 +11,13 @@ a {
 }
 
 .nav-bar {
-    margin-top: 12px;
+    margin-top: 3rem;
     /* background-color: red; */
 }
 
 .contact-us-btn {
     background-color: #d9ff3c;
-    color: black;
+    color: black !important;
 }
 
 /* Desktop Menu - Hidden on mobile by default */
@@ -28,6 +28,14 @@ a {
 /* Mobile button - Visible on mobile by default */
 .mobile-menu-btn {
     display: block;
+}
+
+.fuck{
+    color: purple;
+}
+
+.mazi{
+    color:red;
 }
 
 /* Mobile drawer */
@@ -175,3 +183,12 @@ a {
     width: 100%;
     text-align: center;
 }
+
+.white-links  {
+    color: white !important;
+}
+
+.black-links a {
+    color: black !important;
+}
+
