@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '../components/home/Hero';
 import Sectors from '../components/home/Sectors';
-import Team from '../components/home/Team';
 import ContactForm from '../components/home/ContactForm';
 import { ArrowUpRight, CheckCircle2, Target, Globe } from 'lucide-react';
 import '../about.css';
@@ -131,7 +130,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Team />
       <ContactForm />
     </>
   );

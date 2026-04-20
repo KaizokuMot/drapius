@@ -33,7 +33,7 @@ const navClass = `font-medium transition-colors ${linkColor}`;
   return (
     <>
       <nav className={isWhiteHeader ? `white-links fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-4 shadow-md' : 'py-6'}`:"black-links"}>
-        <div className='top-bar'><p className='top-bar-text'>site under development v.4.0</p></div>
+        <div className='top-bar'><p className='top-bar-text'>site under development v.5.0</p></div>
         <div className="nav-bar container flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="flex flex-col">
